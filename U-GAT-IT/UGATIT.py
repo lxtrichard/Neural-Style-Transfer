@@ -63,6 +63,7 @@ class UGATIT(object) :
         print("# dataset : ", self.dataset)
         print("# batch_size : ", self.batch_size)
         print("# iteration per epoch : ", self.iteration)
+        print("# resume : ", self.resume)
 
         print()
 
@@ -147,7 +148,6 @@ class UGATIT(object) :
                     self.D_optim.param_groups[0]['lr'] -= (self.lr / (self.iteration // 2)) * (start_iter - self.iteration // 2)
 
         # training loop
-        print('training start !')
         start_time = time.time()
         G_loss = []
         D_loss = []
