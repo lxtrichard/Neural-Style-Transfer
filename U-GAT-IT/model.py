@@ -28,8 +28,8 @@ class AdaILN(nn.Module):
         self.rho.data.fill_(0.9)
     
     def forward(self, x, gamma, beta):
-        mean_I, var_I = torch.mean(x, dim=[2,3],keepdims=True),torch.var(x, dim=[2,3],keepdims=True)
-        mean_L, var_L = torch.mean(x, dim=[1,2,3],keepdims=True),torch.var(x, dim=[1,2,3],keepdims=True)
+        mean_I, var_I = torch.mean(x, dim=[2,3],keepdim=True),torch.var(x, dim=[2,3],keepdim=True)
+        mean_L, var_L = torch.mean(x, dim=[1,2,3],keepdim=True),torch.var(x, dim=[1,2,3],keepdim=True)
         out_I = (x-mean_I)/torch.sqrt(var_I+self.eps)
         out_L = (x-mean_L)/torch.sqrt(var_L+self.eps)
         rho = self.rho.expand(x.shape[0],-1,-1,-1)
@@ -49,8 +49,8 @@ class ILN(nn.Module):
         self.beta.data.fill_(0.9)
     
     def forward(self, x):
-        mean_I, var_I = torch.mean(x, dim=[2,3],keepdims=True),torch.var(x, dim=[2,3],keepdims=True)
-        mean_L, var_L = torch.mean(x, dim=[1,2,3],keepdims=True),torch.var(x, dim=[1,2,3],keepdims=True)
+        mean_I, var_I = torch.mean(x, dim=[2,3],keepdim=True),torch.var(x, dim=[2,3],keepdim=True)
+        mean_L, var_L = torch.mean(x, dim=[1,2,3],keepdim=True),torch.var(x, dim=[1,2,3],keepdim=True)
         out_I = (x-mean_I)/torch.sqrt(var_I+self.eps)
         out_L = (x-mean_L)/torch.sqrt(var_L+self.eps)
         rho = self.rho.expand(x.shape[0],-1,-1,-1)
@@ -223,7 +223,7 @@ class Discriminator(nn.Module):
         x = torch.cat([gap,gmp],1)
         x = self.leaky_relu(self.conv1x1(x))
 
-        heatmap = torch.sum(x,dim=1,keepdims=True)
+        heatmap = torch.sum(x,dim=1,keepdim=True)
         x = self.pad(x)
         out = self.conv(x)
         return out, cam_logit, heatmap

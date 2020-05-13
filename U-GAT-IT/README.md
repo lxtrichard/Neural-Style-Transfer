@@ -62,7 +62,7 @@ Set --light as True if CUDA is out of memory.
 First you need to put `selfie2anime_params_0100000.pt` in `results/selfie2anime/model` directory	
 
 ```
-python main.py --phase test --dataset selfie2anime
+python main.py --phase test --dataset selfie2anime --light True
 ```
 
 You can find the test results at `results/selfie2anime/test`.
