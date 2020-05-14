@@ -17,7 +17,8 @@ Unofficial Pytorch implementation of [U-GAT-IT: Unsupervised Generative Attentio
 
 ### Pre-trained model
 
-- [selfie2anime_params_0100000.pt](https://drive.google.com/file/d/1g2fUPuGRutkBM6buuKON_eFEZNmWK-Zn/view?usp=sharing) - put `selfie2anime_params_0100000.pt` in `results/selfie2anime/model` directory	
+- [selfie2anime_params_0100000.pt](https://drive.google.com/file/d/1g2fUPuGRutkBM6buuKON_eFEZNmWK-Zn/view?usp=sharing) - put `selfie2anime_params_0100000.pt` in `results/selfie2anime/model` directory. 
+  If you fail to load the pre-trained model, try to use this instead: [selfie2anime_params_0100000_1.pt](https://drive.google.com/open?id=1PlAgMeBI_D-f9arJ0_BG03CSSI0A_s_t)
 
 ## Usage
 

@@ -2,7 +2,7 @@ from UGATIT import UGATIT
 import argparse
 from utils import *
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 """parsing and configuration"""
 
