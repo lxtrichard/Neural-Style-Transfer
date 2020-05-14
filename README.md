@@ -1,6 +1,8 @@
 # Neural Style Transfer
 
-This is the final project of cs 194-26, Spring 2020. Here I re-implement four papers relative to neural style transfer. You can find the implementation of each paper in the separate folders, each of which contains a instruction on how to run the codes.
+This is the final project of cs 194-26, Spring 2020. Here I re-implement four papers relative to neural style transfer. You can find the implementation of each paper in the separate folders, each of which contains a instruction on how to run the codes. 
+
+[Project Homepage](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/projFinalProposed/cs194-26-agr/)
 
 ## Reference
 
